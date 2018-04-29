@@ -1,0 +1,24 @@
+h1{
+    background-color: gray;
+    margin: 0px;
+    padding: 0px 0px 0px 30px;
+}
+div{
+    display: table;
+}
+h2{
+    text-align: center;
+    float: left;
+    background-color: gainsboro;
+    border: 1px solid white;
+    padding: 40px 5px;
+    margin: 0px;
+}
+span{
+    font-weight: bold;
+    display: inline-block;
+    margin: 46px 5px;
+}
+p{
+    display: inline-block;
+}

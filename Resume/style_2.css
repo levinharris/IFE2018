@@ -1,0 +1,26 @@
+h1{
+    background-color:skyblue;
+    float: left;
+    height: 629px;
+    width: 100px;
+    margin:0px 10px 0px 0px;
+    padding:10px;
+    text-align: center;
+}
+h2{
+    margin:0px 0px 16px 0px;
+    padding:0px;
+}
+span{
+    font-weight: bold;
+}
+p{
+    margin:0px 0px 16px 0px;
+}
+.spec span,.spec p{
+    display: inline-block;
+    padding:0px 10px 0px 5px;
+}
+div{
+    overflow: auto;
+}
