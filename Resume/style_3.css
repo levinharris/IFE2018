@@ -1,16 +1,18 @@
 h1{
     background-color: gray;
     margin: 0px;
-    padding: 0px 0px 0px 30px;
+    width: 100%;
+    text-indent: 0.5em;
 }
 div{
     display: table;
+    width:100%;
+    border:1px solid gainsboro;
 }
 h2{
     text-align: center;
     float: left;
     background-color: gainsboro;
-    border: 1px solid white;
     padding: 40px 5px;
     margin: 0px;
 }
