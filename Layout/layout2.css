@@ -1,0 +1,14 @@
+.container{
+    overflow:auto;
+}
+.content1{
+    width:300px;
+    float:left;
+    margin-right: 20px;
+}
+.content2{
+    overflow:auto;
+}
+.content3{
+    display: none;
+}

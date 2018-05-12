@@ -1,0 +1,18 @@
+.container{
+     height:200px;
+     position:relative
+}
+.content1,.content3{
+    top:0;
+    position:absolute;
+    width:200px;
+}
+.content1{
+    left:0;
+}
+.content3{
+    right:0;
+}
+.content2{
+    margin:0 210px;
+}

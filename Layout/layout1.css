@@ -1,0 +1,11 @@
+.content1{
+    width: 30%;
+    float:left;
+}
+.content2{
+    width: 70%;
+    margin-left: 30%;
+}
+.content3{
+    display: none;
+}

@@ -1,0 +1,18 @@
+.container{
+    overflow:hidden;
+    box-sizing: content-box;
+}
+.content1{
+    float:left;
+    width: calc(100% - 320px);
+    box-sizing: border-box;
+}
+.content2{
+    width:300px;
+    float:left;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.content3{
+    display: none;
+}
