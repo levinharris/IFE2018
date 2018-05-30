@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: lighter;
+    box-sizing: border-box;
+}
+html{ 
+    font-size:15.19px;
+}
+.screen1{
+    position: relative;
+}
+.screen1_bg{
+    background:url(../Beautifiedpage/material/图层1.jpg) no-repeat center;
+    width:100rem;
+    height: 61.87rem;
+    z-index: -1;
+}
+.screen1_bgcover{
+    background:rgba(0, 0, 0, 0.55);
+    width:100rem;
+    height: 61.87rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.screen1_header{
+    position: absolute;
+    top:13rem;
+    left:26.2rem;
+    text-align: center;
+    width: 47.9rem;
+    height: 13.6rem;
+    color: #fff;
+}
+.screen1_header h1{
+    font-size: 3.9rem;
+}
+.screen1_header h2{
+    color: rgba(255,255,255,0.5);
+    font-size:1.19rem;
+    position: absolute;
+    top:8.4rem;
+}
+.screen1_login{
+    position: absolute;
+    top:33.1rem;
+    left:19.7rem;
+    width: 60.62rem;
+    height: 15.62rem;
+    color: #fff;
+    border:1px solid lightgray;
+}
+.screen1_login h3{
+    font-size: 1rem;
+    position: absolute;
+    top:3.81rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.screen1_login h4{
+    font-size: 0.75rem;
+    position: absolute;
+    top:5.81rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.5);
+}
+.screen1_login form{
+    position: absolute;
+    top:9.25rem;
+    left:5.94rem;
+}
+.userinfo{
+    margin-right:1.88rem;
+    width:18.25rem;
+    height: 3.13rem;
+    padding-left: 1.25rem;
+    font-size: 0.875rem;
+    background: rgba(255,255,255, 0);
+    border: 1px solid lightgray;
+    color:#fff;
+}
+.login_button{
+    width:7.81rem;
+    height:3.13rem;
+}
+.screen1_login input:focus{
+    outline:none;
+    background: rgba(255,255,255, 0);
+}
+.screen2{
+    position: relative;
+    background-color: #fff;
+    height:44.38rem;
+    width:100rem;
+}
+.screen2_header{
+    width: 41.06rem;
+    height: 8.94rem;
+    position: absolute;
+    top:5.56rem;
+    left:29.56rem;
+    text-align: center;
+}
+.screen2_header h5{
+    font-size: 0.875rem;
+    color:#141414;
+    margin-bottom: 2.44rem;
+}
+.screen2_header h1{
+    font-size: 2.625rem;
+    color:#141414;
+}
+.screen2_content{
+    width: 64.19rem;
+    height: 17.5rem;
+    position: absolute;
+    left:17.31rem;
+    top:19.81rem;
+}
+.icon{
+    width:25.94rem;
+    height: 5.31rem;
+}
+#icon1{
+    background: url(../Beautifiedpage/material/icon1.png) no-repeat top left;
+    position: absolute;
+    left:0.94rem;
+}
+#icon2{
+    background: url(../Beautifiedpage/material/icon2.png) no-repeat top left;
+    position: absolute;
+    left:38.06rem;
+}
+#icon3{
+    background: url(../Beautifiedpage/material/icon3.png) no-repeat top left;
+    position: absolute;
+    left:0.94rem;
+    top:10.31rem;
+}
+#icon4{
+    background: url(../Beautifiedpage/material/icon4.png) no-repeat top left;
+    position: absolute;
+    left:38.06rem;
+    top:10.31rem;
+}
+.screen2_content h2{
+    font-size:1.25rem;
+    position: absolute;
+    left:4.75rem;
+    color:#141414;
+}
+.screen2_content h3{
+    font-size:1rem;
+    position: absolute;
+    top:2.56rem;
+    left:4.75rem;
+    color:rgba(20, 20, 20, 0.7);
+}
+.screen3{
+    position: relative;
+}
+.screen3_bg{
+    background:url(../Beautifiedpage/material/图层2.jpg) no-repeat center;
+    width:100rem;
+    height: 50rem;
+    z-index: -1;
+}
+.screen3_bgcover{
+    background:rgba(0, 0, 0, 0.55);
+    width:100rem;
+    height: 50rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.screen3_header{
+    position: absolute;
+    top:11.44rem;
+    left:19.68rem;
+    width: 25.94rem;
+    height: 19.625rem;
+}
+.screen3_header h1{
+    font-size: 2.625rem;
+    color: #fff;
+    margin-bottom: 2.9375rem;
+}
+.screen3_header h2{
+    color: rgba(255,255,255,0.7);
+    font-size:1.125rem;
+}
+#button1{
+    width: 240px;
+    height:60px;
+    border:1px solid #fff;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    left:19.68rem;
+    top:34.69rem;
+}
+#button2{
+    width: 240px;
+    height:60px;
+    border:1px solid gray;
+    background-color: rgba(255,255,255, 0);
+    border-radius: 3px;
+    position: absolute;
+    left:36.56rem;
+    top:34.69rem;
+    color:#fff;
+}
+.ipad{
+    position: absolute;
+    left:59.65rem;
+    top:6.44rem;
+    border:1px solid gray;
+    border-radius: 1.88rem 0 0 1.88rem;
+    width:40.31rem;
+    height:37.5rem;
+    border-right:0px;
+}
+.ipadscr{
+    background: url(../Beautifiedpage/material/ipad.jpg) no-repeat center;
+    position: absolute;
+    top:1.875rem;
+    left:3.73rem;
+    border:1px solid gray;
+    width:36.56rem;
+    height:33.875rem;
+    border-right:0px;
+}
+.ipadhome{
+    width:0.625rem;
+    height: 0.625rem;
+    position: absolute;
+    top:18.54rem;
+    left:1.88rem;
+    border:1px solid gray;
+    border-radius: 50%;
+}
+.screen4{
+    position: relative;
+    background-color: #fff;
+    height:36.25rem;
+    width:100rem;
+    border-bottom: 1px solid lightgray;
+}
+.screen4 h1{
+    position: absolute;
+    left:33.25rem;
+    top:6.25rem;
+    font-size: 2.625rem;
+    color:#141414;
+}
+.screen4_main{
+    position: absolute;
+    left:20.625rem;
+    top:14.06rem;
+    width: 59.375rem;
+    height: 17.19rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.screen4_content{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex: 0 1 16.5rem;
+    align-items: center;
+}
+.screen4_content img{
+    margin-bottom: 2.44rem;
+}
+.screen4_content article{
+    flex: 0 1 12.375rem;
+}
+.screen5{
+    position: relative;
+    background-color: #fff;
+    height:62.5rem;
+    width:100rem;
+    border-bottom: 1px solid lightgray;
+}
+.screen5_main{
+    position: absolute;
+    left:19.69rem;
+    top:7.19rem;
+    width: 61.25rem;
+    height: 48.75rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.screen5_content{
+    flex: 0 1 19.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.screen5_content section{
+    flex:0 1 20.6rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    height:15rem;
+}
+.screen5_content h1{
+    font-size: 1.25rem;
+    color: #141414;
+}
+.screen5_content p{
+    font-size: 1rem;
+    color:rgba(20, 20, 20, 0.7);
+}
+.screen6{
+    position: relative;
+    background-color: #fff;
+    height:67.75rem;
+    width:100rem;
+    border-bottom: 1px solid lightgray;
+}
+.screen6_header{
+    position: absolute;
+    top:6.25rem;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.screen6_header h1{
+    font-size: 2.625rem;
+    color: #141414;
+    margin-bottom: 2.19rem;
+}
+.screen6_header h2{
+    font-size: 1.125rem;
+    color: rgba(20, 20, 20, 0.7);
+}
+.screen6 img{
+    position: absolute;
+    top:17.06rem;
+    left:50%;
+    transform: translateX(-50%);
+}
+.screen7{
+    position: relative;
+    background-color: #fff;
+    height:43.75rem;
+    width:100rem;
+}
+.contact{
+    position: absolute;
+    left:18rem;
+    top:4.375rem;
+    border: 1px solid lightgray;
+    width:29.375rem;
+    height:35rem;
+    border-radius: 0.5rem;
+}
+.contact h1{
+    position: absolute;
+    top:3.13rem;
+    left:50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color:#141414;
+    margin-bottom: 3rem;
+}
+.contact form{
+    position: absolute;
+    top:6.875rem;
+    left:50%;
+    transform: translateX(-50%);
+}
+.user_contact{
+    width: 23.125rem;
+    height: 3.13rem;
+    margin-bottom: 1.875rem;
+    border: 1px solid lightgray;
+    font-size: 0.875rem;
+    padding-left:1.25rem;
+}
+#message{
+    width: 23.125rem;
+    height: 9rem;
+}
+.send_button{
+    width: 23.125rem;
+    height: 3.13rem;
+    background-color: #141414;
+    color:#fff;
+    border: none;
+}
+.screen7_header{
+    position: absolute;
+    left:57.125rem;
+    top:9.875rem;
+}
+.screen7_header h1{
+    font-size: 2.625rem;
+    margin-bottom: 2.5rem;
+    color:#141414;
+}
+.screen7_header p{
+    color: rgba(20,20,20,0.7);
+    font-size:1rem;
+}
+.contact_info{
+    position: absolute;
+    left:57.25rem;
+    top:22.81rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 16.375rem;
+    height:9.375rem;
+}
+.info_detail{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 1 2.06rem;
+}
+.info_detail p{
+    flex: 0 1 13.5rem;
+    color:#141414;
+    font-size: 1rem;
+}
+footer{
+    position: relative;
+    background-color: #141414;
+    height:25.625rem;
+    width:100rem;
+}
+.service{
+    position: absolute;
+    top:5.5rem;
+    left:13.4375rem;
+    width:42.625rem;
+    height:12.375rem;
+    display: flex;
+    justify-content: space-between;
+}
+.support{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.support h1{
+    font-size: 1rem;
+    color:#fff;
+}
+.support span{
+    font-size: 0.875rem;
+    color:rgba(255,255,255,0.3);
+}
+.blessing{
+    position: absolute;
+    right:14.1875rem;
+    top:5.5rem;
+    width:16.25rem;
+    height:8.94rem;
+}
+.blessing h1{
+    font-size: 1rem;
+    color:#fff;
+    margin-bottom:1.75rem;
+}
+.blessing span{
+    font-size: 0.875rem;
+    color:rgba(255,255,255,0.3);
+}
+.blessing img{
+    margin-top:2.6875rem;
+}
