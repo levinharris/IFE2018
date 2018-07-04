@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="number" placeholder="第一个数字">
+    <input id="second-number" type="number" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var addbtn = document.querySelector('#add-btn')
+        var minusbtn = document.querySelector('#minus-btn')
+        var timesbtn = document.querySelector('#times-btn')
+        var dividebtn = document.querySelector('#divide-btn')
+        var result = document.querySelector('#result')
+        function cal(){
+            addbtn.addEventListener("click",function(event){
+                var self = event.target
+                var fn = document.querySelector('#first-number').value
+                var sn = document.querySelector('#second-number').value
+                var n1 = Number(fn)
+                var n2 = Number(sn)
+                var temp = n1 + n2
+                result.innerHTML = temp.toString()
+                })
+            minusbtn.addEventListener("click",function(event){
+                var self = event.target
+                var fn = document.querySelector('#first-number').value
+                var sn = document.querySelector('#second-number').value
+                var n1 = Number(fn)
+                var n2 = Number(sn)
+                var temp = n1 - n2
+                result.innerHTML = temp.toString()
+            })
+            timesbtn.addEventListener("click",function(event){
+                var self = event.target
+                var fn = document.querySelector('#first-number').value
+                var sn = document.querySelector('#second-number').value
+                var n1 = Number(fn)
+                var n2 = Number(sn)
+                var temp = n1 * n2
+                result.innerHTML = temp.toString()
+            })
+            dividebtn.addEventListener("click",function(event){
+                var self = event.target
+                var fn = document.querySelector('#first-number').value
+                var sn = document.querySelector('#second-number').value
+                var n1 = Number(fn)
+                var n2 = Number(sn)
+                if(n2 == 0){
+                    result.innerHTML = "被除数不能为0"
+                }
+                else{
+                    var temp = n1 / n2
+                    result.innerHTML = temp.toString()
+                }
+            })
+        }
+        cal()
+    </script>
+</body>
+</html>

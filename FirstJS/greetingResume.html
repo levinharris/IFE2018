@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>简历</title>
+        <link rel="stylesheet" type="text/css" href="style_3.css">
+    </head>
+    <body>
+        <h1>简历</h1>
+        <div>
+            <div class="spec">
+                <h2>基本信息</h2>
+                <span>姓名</span><p>海带</p>
+                <span>性别</span><p>男</p>
+                <span>应聘职位</span><p>Web前端工程师</p>
+            </div>
+            <div class="spec">
+                <h2>联系方式</h2>
+                <span>手机</span><p>17516913133</p>
+                <span>Email</span><a href="https://haidai@baidu.com">haidai@baidu.com</a>
+                <span>个人主页</span><a href="https://github.com/levinharris">Github</a>
+            </div>
+            <div>
+                <h2>能力描述</h2>
+                <span>技术能力</span><p>熟练掌握HTML,CSS,JavaScript</p>
+                <span>综合能力</span><p>良好的沟通,主动积极,努力勤奋</p>
+                <button class="interest">兴趣爱好</button>
+            </div>
+            <div>
+                <h2>教育经历</h2>
+                <span>本科</span><p>百度前端技术学院小薇学院</p>
+                <span>研究生</span><p>百度前端技术学院大斌学院</p>
+            </div>
+            <div>
+                <h2>项目经历</h2>
+                <span>小度小度</span><p>作为前端工程师参与了ABC组件的研发</p>
+                <span>SAN Doc</span><p>作为文档工程师参与了SAN Doc编写</p>
+            </div>
+        </div>
+        <script>
+            function greeting(){
+                var d = new Date()
+                var h = d.getHours()
+                var s = ''
+                if(h<11){
+                    s = '上午好'
+                }else if(h>=11 && h<13){
+                    s = '中午好'
+                }else{
+                    s = '下午好'
+                }
+                alert(s)
+            }
+            function interest_alert(){
+                var t = document.querySelector('.interest')
+                t.addEventListener('click',function(){
+                    alert('动漫')
+                })
+            }
+            greeting()
+            interest_alert()
+        </script>
+    </body>
+</html>

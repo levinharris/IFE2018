@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>
+    <script>
+        document.write('<table>');//添加table开始标签
+        for(var i =1;i<=9;i++){
+            document.write('<tr>');//添加tr开始标签
+            for(var j=1;j<=i;j++){
+                document.write("<td>"+j+"x"+i+"="+i*j+"</td>");//让其在td标签中显示
+            }
+            document.write("</tr>")//添加tr结束标签
+        }
+        document.write('</table>');//添加table结束标签
+    </script>
+</body>
+</html>
