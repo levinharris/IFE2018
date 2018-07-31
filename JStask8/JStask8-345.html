@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+    <body>
+        <script>
+            function diyTrim(str) {
+                var result = "";
+            
+                // do something
+                var a = str.split('')
+                var b = new Array()
+                var j = 0;
+                //全角空格 Unicode编码 12288
+                //半角空格 Unicode编码 32
+                for (var i=0;i<str.length;i++){
+                    if (str.charCodeAt(i)!=32 && str.charCodeAt(i)!=12288){
+                            b[j]=a[i]
+                            j++
+                        }
+                }
+                result = b.join('')
+                return result
+            }
+            
+            // 测试用例
+            console.log(diyTrim(' a f b    ')); // ->a f b
+            console.log(diyTrim('    ffdaf    ')); // ->ffdaf
+            console.log(diyTrim('1    ')); // ->1
+            console.log(diyTrim('　　f')); // ->f
+            console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+            console.log(diyTrim(' ')); // ->
+            console.log(diyTrim('　')); // ->
+            console.log(diyTrim('')); // ->
+            
+            /*
+            去掉字符串str中，连续重复的地方
+            */
+            function removeRepetition(str) {
+                var result = "";
+            
+                // do something
+                var s = str.split('')
+                var b = new Array()
+                var j = 0;
+                for(i=0;i<str.length;i++){
+                    var k= i+1
+                    if(s[i]!=s[k]){
+                        b[j]=s[i]
+                        j++
+                    }             
+                }
+                result = b.join('')
+                return result
+            }
+            
+            // 测试用例
+            console.log(removeRepetition("aaa")); // ->a
+            console.log(removeRepetition("abbba")); // ->aba
+            console.log(removeRepetition("aabbaabb")); // ->abab
+            console.log(removeRepetition("")); // ->
+            console.log(removeRepetition("abc")); // ->abc
+
+            
+            var tree = {
+            "id": 0,
+            "name": "root",
+            "left": {
+                "id": 1,
+                "name": "Simon",
+                "left": {
+                    "id": 3,
+                    "name": "Carl",
+                    "left": {
+                        "id": 7,
+                        "name": "Lee",
+                        "left": {
+                            "id": 11,
+                            "name": "Fate"
+                        }
+                    },
+                    "right": {
+                        "id": 8,
+                        "name": "Annie",
+                        "left": {
+                            "id": 12,
+                            "name": "Saber"
+                        }
+                    }
+                },
+                "right": {
+                    "id": 4,
+                    "name": "Tony",
+                    "left": {
+                        "id": 9,
+                        "name": "Candy"
+                    }
+                }
+            },
+            "right": {
+                "id": 2,
+                "name": "right",
+                "left": {
+                    "id": 5,
+                    "name": "Carl",
+                },
+                "right": {
+                    "id": 6,
+                    "name": "Carl",
+                    "right": {
+                        "id": 10,
+                        "name": "Kai"
+                    }        
+                }
+            }
+        }
+        function findIdByName(name) {
+            var id;
+
+            function find(obj){
+                if(obj != null){
+                    if(obj.name === name){
+                        id = obj.id;
+                    }
+                    find(obj.left);
+                    find(obj.right);
+                }
+            }
+            find(tree);
+        return id;
+        console.log(id)
+        }
+        function findNameById(id) {
+            var name;
+
+            function find(obj){
+                if(obj != null){
+                    if(obj.id === id){
+                        name = obj.name;
+                    }
+                    find(obj.left);
+                    find(obj.right);
+                }
+            }
+            find(tree);
+        return name;
+        console.log(name)
+        }
+        function getListWithDLR() {
+            //根节点、左子树、右子树
+            var arr=[];
+            function DLR(obj){
+                if(obj){
+                    arr.push(obj.name);
+                    DLR(obj.left);
+                    DLR(obj.right);
+                }
+            }
+            DLR(tree);
+            console.log(arr);
+        }
+        console.log('前序遍历');
+        getListWithDLR();
+        function getListWithLDR() {
+            //左子树，根节点，右子树
+            var arr=[];
+            function LDR(obj){
+                if(obj){
+                    LDR(obj.left);
+                    arr.push(obj.name);
+                    LDR(obj.right);
+                }
+            }
+            LDR(tree);
+            console.log(arr);
+        }
+
+        console.log('中序遍历');
+        getListWithLDR();
+        function getListWithLRD() {
+            var arr=[];
+            function LRD(obj){
+                if(obj){
+                    LRD(obj.left);
+                    LRD(obj.right);
+                    arr.push(obj.name);
+                }
+            }
+            LRD(tree);
+            console.log(arr);
+        }
+
+        console.log('后序遍历');
+        getListWithLRD();
+        </script>
+    </body>
+</html>

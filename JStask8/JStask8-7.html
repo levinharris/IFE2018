@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+    <body>
+        <input id="queue-input" type="text">
+        <p id="queue-cont">队列内容：apple&lt;-pear</p>    
+        <button id="in-btn">入队</button>
+        <button id="out-btn">出队</button>
+        <button id="font-btn">打印队头元素内容</button>
+        <button id="empty-btn">判断队列是否为空</button>
+        
+        <script>
+
+            var queue = ["apple", "pear"];
+            var txt = document.querySelector("#queue-input")
+            var show = document.querySelector("#queue-cont")
+            var inbtn = document.querySelector("#in-btn")
+            var outbtn = document.querySelector("#out-btn")
+            var fontbtn = document.querySelector("#font-btn")
+            var emptybtn = document.querySelector("#empty-btn")
+            inbtn.addEventListener("click",function(){
+                var t = txt.value
+                if(t){
+                    queue.push(t)
+                    show.innerHTML = "队列内容：" + queue.join("&lt;-")
+                }
+            })
+            outbtn.addEventListener("click",function(){
+                    queue.shift()
+                    show.innerHTML = "队列内容：" + queue.join("&lt;-")
+            })
+            fontbtn.addEventListener("click",function(){
+                alert(queue[0])
+            })
+            emptybtn.addEventListener("click",function(){
+                if(queue.length ===0){
+                    alert("数组为空")
+                }
+                else{
+                    alert("数组不为空")
+                }
+            })
+
+        </script>
+    </body>
+</html>

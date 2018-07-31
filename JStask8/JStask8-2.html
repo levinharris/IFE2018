@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+    <body>
+        <div>
+            <label>String A:
+                <input id="radio-a" type="radio" checked="true" name="str-obj" value="a">
+            </label>
+            <textarea id="str-a"></textarea>
+            <label>String B:
+                <input id="radio-b" type="radio" name="str-obj" value="b">
+            </label>
+            <textarea id="str-b"></textarea>        
+            <label>Num A：<input id="num-a" type="number" value="0"></label>
+            <label>Num B：<input id="num-b" type="number" value="1"></label>
+        </div>
+        <div>
+            <button id="a">获取当前选中输入的内容长度</button>
+            <button id="b">当前选中输入中的第3个字符</button>
+            <button id="c">把两个输入框的文字连接在一起输出（concat）</button>
+            <button id="d">输入B中的内容，在输入A的内容中第一次出现的位置（indexOf）</button>
+            <button id="e">输入A中的内容，在输入B的内容中最后一次出现的位置（lastIndexOf）</button>
+            <button id="f">使用slice获取选中输入框内容的部分内容，参数为num-a及num-b</button>
+            <button id="g">当前选中输入框的行数</button>
+            <button id="h">使用substr获取选中输入框内容的子字符串，参数为num-a及num-b</button>
+            <button id="i">把所选输入框中的内容全部转为大写</button>
+            <button id="j">把所选输入框中的内容全部转为小写</button>
+            <button id="k">把所选输入框中内容的半角空格全部去除</button>
+            <button id="l">把所选输入框中内容的a全部替换成另外一个输入框中的内容</button>
+        </div>
+        <p id="result"></p>
+        <script>
+            var result = document.querySelector("#result")
+            var radioa = document.querySelector("#radio-a")  
+            var radiob = document.querySelector("#radio-b")
+            var stra = document.querySelector("#str-a")
+            var strb = document.querySelector("#str-b")
+            var matha = document.querySelector("#num-a")  
+            var mathb = document.querySelector("#num-b")  
+            var a = document.querySelector("#a")
+            var b = document.querySelector("#b")
+            var c = document.querySelector("#c")
+            var d = document.querySelector("#d")
+            var e = document.querySelector("#e")
+            var f = document.querySelector("#f")
+            var g = document.querySelector("#g")
+            var h = document.querySelector("#h")
+            var i = document.querySelector("#i")
+            var j = document.querySelector("#j")            
+            var k = document.querySelector("#k")
+            var l = document.querySelector("#l")
+            a.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    if(stra.value){
+                        var len = 0
+                        for(i=0;i<stra.value.length;i++){
+                            len++
+                        }
+                        result.innerHTML = "按钮1a "+len
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(strb.value){
+                        var len = 0
+                        for(i=0;i<strb.value.length;i++){
+                            len++
+                        }
+                        result.innerHTML = "按钮1b "+len
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+            })
+            b.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    var strav = stra.value
+                    if(strav && strav.length>=3){
+                        var st = strav.slice(2,3)
+                        result.innerHTML = "按钮2a " + st
+                    }
+                    else{
+                        result.innerHTML = "请输入至少3个字符"
+                    }
+                }
+                if(radiob.checked == true){
+                    var strbv = strb.value
+                    if(strbv && strbv.length>=3){
+                        var st = strbv.slice(2,3)
+                        result.innerHTML = "按钮2b " + st
+                    }
+                    else{
+                        result.innerHTML = "请输入至少3个字符"
+                    }
+                }
+            })
+            c.addEventListener("click",function(){
+                if(stra.value && strb.value){
+                    var ac = [stra.value]
+                    var combinition = ac.concat(strb.value)
+                    result.innerHTML = "按钮3 " + combinition
+                }
+                else{
+                    result.innerHTML = "请输入内容"
+                }
+            })
+            d.addEventListener("click",function(){
+                if(stra.value && strb.value){
+                    var posi = stra.value.indexOf(strb.value)
+                    result.innerHTML = "按钮4 " + posi
+                }
+                else{
+                    result.innerHTML = "请输入内容"
+                }
+            })
+            e.addEventListener("click",function(){
+                if(stra.value && strb.value){
+                    var lastposi = strb.value.lastIndexOf(stra.value)
+                    result.innerHTML = "按钮5 " + lastposi
+                }
+                else{
+                    result.innerHTML = "请输入内容"
+                }
+            })
+            f.addEventListener("click",function(){
+                var na = matha.value
+                var nb = mathb.value
+                if(radioa.checked == true){
+                    if(stra.value){
+                        var ss = stra.value.slice(na,nb)
+                        result.innerHTML = "按钮6a " + ss
+                    }
+                    else{
+                        result.innerHTML = "请输入至少3个字符"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(strb.value){
+                        var ss = strb.value.slice(na,nb)
+                        result.innerHTML = "按钮6b " + ss
+                    }
+                    else{
+                        result.innerHTML = "请输入至少3个字符"
+                    }
+                }
+            })
+            g.addEventListener("click",function(){
+                var ssa = stra.value
+                var ssb = strb.value
+                if(radioa.checked == true){
+                    if(ssa){
+                        var ss = ssa.split("\n").length
+                        result.innerHTML = "按钮7a " + ss
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(ssb){
+                        var ss = ssb.split("\n").length
+                        result.innerHTML = "按钮7b " + ss
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+            })
+            h.addEventListener("click",function(){
+                var na = matha.value
+                var nb = mathb.value
+                if(radioa.checked == true){
+                    if(stra.value){
+                        var subs = stra.value.substr(na,nb)
+                        result.innerHTML = "按钮8a " + subs
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(strb.value){
+                        var subs = strb.value.substr(na,nb)
+                        result.innerHTML = "按钮8b " + subs
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+            })
+            i.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    if(stra.value){
+                        var upper = stra.value.toUpperCase()
+                        result.innerHTML = "按钮9a " + upper
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(strb.value){
+                        var upper = strb.value.toUpperCase()
+                        result.innerHTML = "按钮9b " + upper
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+            })
+            j.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    if(stra.value){
+                        var lower = stra.value.toLowerCase()
+                        result.innerHTML = "按钮10a " + lower
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+                if(radiob.checked == true){
+                    if(strb.value){
+                        var lower = strb.value.toLowerCase()
+                        result.innerHTML = "按钮10b " + lower
+                    }
+                    else{
+                        result.innerHTML = "请输入内容"
+                    }
+                }
+            })
+            k.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    var sa = stra.value
+                    var a=sa.split('')
+                    var b=new Array()
+                    var j=0;
+                    //全角空格 Unicode编码 12288
+                    //半角空格 Unicode编码 32
+                    for (var i=0;i<sa.length;i++){
+                        if (sa.charCodeAt(i)!=32){
+                                b[j]=a[i]
+                                j++
+                            }
+                    }
+                    result.innerHTML = "按钮11a " + b.join('')
+                }
+                if(radiob.checked == true){
+                    var sb = strb.value
+                    var a=sb.split('')
+                    var b=new Array()
+                    var j=0;
+                    //全角空格 Unicode编码 12288
+                    //半角空格 Unicode编码 32
+                    for (var i=0;i<sb.length;i++){
+                        if (sb.charCodeAt(i)!=32){
+                                b[j]=a[i]
+                                j++
+                            }
+                    }
+                    result.innerHTML = "按钮11b " + b.join('')
+                }
+            })
+            //方案1---- l.addEventListener("click",function(){
+            //     if(radioa.checked == true){
+            //         if(stra.value){
+            //             var replaced = stra.value.replace(/a/, strb.value)
+            //             result.innerHTML = "按钮12a " + replaced
+            //         }
+            //         else{
+            //             result.innerHTML = "请输入内容"
+            //         }
+            //     }
+            //     if(radiob.checked == true){
+            //         if(strb.value){
+            //             var replaced = strb.value.replace(/a/, stra.value)
+            //             result.innerHTML = "按钮12b " + replaced
+            //         }
+            //         else{
+            //             result.innerHTML = "请输入内容"
+            //         }
+            //     }
+            // })
+            l.addEventListener("click",function(){
+                if(radioa.checked == true){
+                    var sa = stra.value
+                    var sb = strb.value
+                    var as=sa.split('')
+                        for(i=0;i<sa.length;i++){
+                            if(as[i] == "a"){
+                            as.splice(i,1,sb)
+                        }
+                    result.innerHTML = "按钮12a " + as.join('')
+                    }
+                }
+                if(radiob.checked == true){
+                    var sa = stra.value
+                    var sb = strb.value
+                    var bs=sb.split('')
+                        for(i=0;i<sb.length;i++){
+                            if(bs[i] == "a"){
+                            bs.splice(i,1,sa)
+                        }
+                    result.innerHTML = "按钮12b " + bs.join('')
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

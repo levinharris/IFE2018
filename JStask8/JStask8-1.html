@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+    <body>
+        <div>
+            <label>Number A:<input id="radio-a" type="radio" name="math-obj" value="a"></label><input id="num-a" type="text">
+            <label>Number B:<input id="radio-b" type="radio" name="math-obj" value="b"></label><input id="num-b" type="text">
+        </div>
+        <div>
+            <button id="a">判断当前选中的输入框输入内容是否为数字</button>
+            <button id="b">把 A 四舍五入为 B 个小数位数的数字</button>
+            <button id="c">当前选中数字的绝对值</button>
+            <button id="d">对当前选中的数字进行上舍入</button>
+            <button id="e">对当前选中的数字进行下舍入</button>
+            <button id="f">把当前选中的数字四舍五入为最接近的整数</button>
+            <button id="g">返回 A 和 B 中的最高值</button>
+            <button id="h">返回 A 和 B 中的最低值</button>        
+        </div>
+        <p id="result"></p>
+        <script>
+            var result = document.querySelector("#result")
+            var radioa = document.querySelector("#radio-a")  
+            var radiob = document.querySelector("#radio-b")
+            var matha = document.querySelector("#num-a")  
+            var mathb = document.querySelector("#num-b")  
+            var a = document.querySelector("#a")
+            var b = document.querySelector("#b")
+            var c = document.querySelector("#c")
+            var d = document.querySelector("#d")
+            var e = document.querySelector("#e")
+            var f = document.querySelector("#f")
+            var g = document.querySelector("#g")
+            var h = document.querySelector("#h")
+            function al(){
+                if(radioa.checked == true){
+                    var na = Number(matha.value)
+                    if(!isNaN(na)){
+                        console.log("这是一个数字",na)
+                    }
+                    else{
+                        console.log("请输入一个数字")
+                    }
+                    return na
+                }
+                if(radiob.checked == true){
+                    var nb = Number(mathb.value)
+                    if(!isNaN(nb)){
+                        console.log("这是一个数字",nb)
+                    }
+                    else{
+                        console.log("请输入一个数字")
+                    }
+                    return nb
+                }
+            }
+            a.addEventListener("click",al)
+            function bl(){
+                b.addEventListener("click",function(){
+                    if(!isNaN(matha.value) && !isNaN(mathb.value)){
+                        var tempblb = Number(mathb.value).toFixed()
+                        var tempbla = Number(matha.value).toFixed(tempblb)
+                        result.innerHTML = tempbla
+                    }
+                    else{
+                        result.innerHTML = "请输入正确的数字参数"
+                    }
+                })
+            }
+            bl()
+            function cl(){
+                var tempcl = Math.abs(al())
+                if(!isNaN(tempcl)){
+                    result.innerHTML = tempcl
+                }
+                else{
+                    result.innerHTML = ""
+                }
+            }
+            c.addEventListener("click",function(){
+                    if(radioa.checked == true){
+                        cl()
+                    }
+                    if(radiob.checked == true){
+                       cl()
+                    }
+            })
+            function dl(){
+                var tempdl = Math.ceil(al())
+                if(!isNaN(tempdl)){
+                    result.innerHTML = tempdl
+                }
+                else{
+                    result.innerHTML = ""
+                }
+            }
+            d.addEventListener("click",function(){
+                    if(radioa.checked == true){
+                       dl()
+                    }
+                    if(radiob.checked == true){
+                        dl()
+                    }
+            })
+            function el(){
+                var tempel = Math.floor(al())
+                if(!isNaN(tempel)){
+                    result.innerHTML = tempel
+                }
+                else{
+                    result.innerHTML = ""
+                }
+            }
+            e.addEventListener("click",function(){
+                    if(radioa.checked == true){
+                        el()
+                    }
+                    if(radiob.checked == true){
+                        el()
+                    }
+            })
+            function fl(){
+                var tempfl = Math.round(al())
+                if(!isNaN(tempfl)){
+                    result.innerHTML = tempfl
+                }
+                else{
+                    result.innerHTML = ""
+                }
+            }
+            f.addEventListener("click",function(){
+                    if(radioa.checked == true){
+                        fl()
+                    }
+                    if(radiob.checked == true){
+                        fl()
+                    }
+            })
+            function gl(){
+                g.addEventListener("click",function(){
+                    if(!isNaN(matha.value) && !isNaN(mathb.value)){
+                        if(Number(mathb.value)>Number(matha.value)){
+                            result.innerHTML = mathb.value
+                        }
+                        else{
+                            result.innerHTML = matha.value
+                        }
+                    }
+                    else{
+                        result.innerHTML = "请输入正确的数字参数"
+                    }
+                })
+            }
+            gl()
+            function hl(){
+                h.addEventListener("click",function(){
+                    if(!isNaN(matha.value) && !isNaN(mathb.value)){
+                        if(Number(mathb.value)>Number(matha.value)){
+                            result.innerHTML = matha.value
+                        }
+                        else{
+                            result.innerHTML = mathb.value
+                        }
+                    }
+                    else{
+                        result.innerHTML = "请输入正确的数字参数"
+                    }
+                })
+            }
+            hl()
+        </script>
+    </body>
+</html>
