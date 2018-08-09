@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+    <body>
+        <div id="ctime"></div>
+        <div id="etime"></div>
+        <select id="year-select">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+        </select>
+        
+        <select id="month-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        
+        <select id="day-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </select>
+        
+        <select id="hour-select">
+            <option value="0">00</option>
+            <option value="1">01</option>        
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </select>
+        
+        <select id="minite-select">
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
+        
+        <select id="second-select">
+            <option value="0">00</option>
+            <option value="1">01</option>
+            <option value="2">02</option>
+            <option value="3">03</option>
+            <option value="4">04</option>
+            <option value="5">05</option>
+            <option value="6">06</option>
+            <option value="7">07</option>
+            <option value="8">08</option>
+            <option value="9">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+            <option value="32">32</option>
+            <option value="33">33</option>
+            <option value="34">34</option>
+            <option value="35">35</option>
+            <option value="36">36</option>
+            <option value="37">37</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+            <option value="41">41</option>
+            <option value="42">42</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+            <option value="47">47</option>
+            <option value="48">48</option>
+            <option value="49">49</option>
+            <option value="50">50</option>
+            <option value="51">51</option>
+            <option value="52">52</option>
+            <option value="53">53</option>
+            <option value="54">54</option>
+            <option value="55">55</option>
+            <option value="56">56</option>
+            <option value="57">57</option>
+            <option value="58">58</option>
+            <option value="59">59</option>
+        </select>
+        
+        <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+
+
+        <script>
+            //任务1
+            function Go() {
+                console.log("Go");
+            }
+            function GoSteps(n) {
+                if(n===undefined){
+                    var n=1
+                }
+                if(n == true || typeof(n) === "number"){
+                    var n = Math.floor(n)
+                    if(n>0){
+                        while(n--){
+                            Go()
+                        }
+                    }
+                    else{
+                        return
+                    }
+                }else{
+                    return
+                }
+            }
+            GoSteps(10); // Go 10次
+            GoSteps(1); // Go 1次
+            GoSteps(); // Go 1次，认为缺少参数时，默认参数为1
+            GoSteps(0);  // 0次
+            GoSteps(-1);  // 0次
+            GoSteps(1.4);  // Go 1次
+            GoSteps(1.6);  // Go 1次
+            GoSteps(-1);  // 0次
+            GoSteps(true);  // Go 1次
+            GoSteps(false);  // 0次
+            GoSteps("Test");  // 0次
+            GoSteps(NaN);  // 0次
+            GoSteps(null);  // 0次
+
+            //任务2
+            function cweek(x){
+                var week; //存储星期几
+                switch (x.getDay()) {
+                    case 0:
+                        week = "星期日";
+                        break;
+                    case 1:
+                        week = "星期一";
+                        break;
+                    case 2:
+                        week = "星期二";
+                        break;
+                    case 3:
+                        week = "星期三";
+                        break;
+                    case 4:
+                        week = "星期四";
+                        break;
+                    case 5:
+                        week = "星期五";
+                        break;
+                    case 6:
+                        week = "星期六";
+                        break;
+                    default:
+                        week = "未知";
+                        break;
+                }
+                return week
+            }
+            function dualtime(i){
+                if (i < 10){
+                i = "0" + i;
+                }
+                return i
+            }
+            function cclock(){
+                var today = new Date();
+                var month = today.getMonth() + 1
+                var day = today.getDate()
+                var h = today.getHours()
+                var m = today.getMinutes()
+                var s = today.getSeconds()
+                var dt = (today.getFullYear()) + "年" + dualtime(month) + "月" + dualtime(day) + "日" + " " + cweek(today) + " " + dualtime(h) +":"+ dualtime(m) + ":" + dualtime(s);
+                document.querySelector('#ctime').innerHTML = dt
+                t = setTimeout("cclock()",300)
+            }
+            cclock()
+
+            //任务3
+            function eweek(x){
+                var week; //存储星期几
+                switch (x.getDay()) {
+                    case 0:
+                        week = "Sunday";
+                        break;
+                    case 1:
+                        week = "Monday";
+                        break;
+                    case 2:
+                        week = "Tuesday";
+                        break;
+                    case 3:
+                        week = "Wenesday";
+                        break;
+                    case 4:
+                        week = "Thursday";
+                        break;
+                    case 5:
+                        week = "Friday";
+                        break;
+                    case 6:
+                        week = "Saturday";
+                        break;
+                    default:
+                        week = "未知";
+                        break;
+                }
+                return week
+            }
+            function eclock(){
+                var today = new Date();
+                var month = today.getMonth() + 1
+                var day = today.getDate()
+                var h = today.getHours()
+                var m = today.getMinutes()
+                var s = today.getSeconds()
+                var apm = "AM"; //默认显示上午: AM 
+                if (h>12){ //按12小时制显示
+                    h = h - 12; 
+                    apm="PM" ; 
+                } 
+                var dt = (today.getFullYear()) + "-" + dualtime(month) + "-" + dualtime(day) + " " + eweek(today) + " " + dualtime(h) +":"+ dualtime(m) + ":" + dualtime(s) + " " + apm;
+                document.querySelector('#etime').innerHTML = dt
+                t = setTimeout("eclock()",300)
+            }
+            eclock()
+
+            //任务4
+            var y = document.querySelector("#year-select") 
+            var m = document.querySelector("#month-select")
+            var d = document.querySelector("#day-select")
+            var h = document.querySelector("#hour-select")
+            var min = document.querySelector("#minite-select")
+            var s = document.querySelector("#second-select")
+            var result = document.querySelector("#result-wrapper")
+            // function isleap(){
+            //     var the_year = new Date().getFullYear();
+            //     var isleap = the_year % 4 == 0 && the_year % 100 !=0 || the_year % 400 ==0;
+            //     return isleap;
+            // }
+            function getTimeTxt(){
+                var yindex = y.selectedIndex
+                var mindex = m.selectedIndex
+                var dindex = d.selectedIndex
+                var hindex = h.selectedIndex
+                var minindex = min.selectedIndex
+                var sindex = s.selectedIndex
+                var ytxt = y.options[yindex].text
+                var mtxt = m.options[mindex].text
+                var dtxt = d.options[dindex].text
+                var htxt = h.options[hindex].text
+                var mintxt = min.options[minindex].text
+                var stxt = s.options[sindex].text
+                var timetxt = new Array(ytxt,mtxt,dtxt,htxt,mintxt,stxt)
+                return timetxt
+            }
+            function getTimeVal(){
+                var yindex = y.selectedIndex
+                var mindex = m.selectedIndex
+                var dindex = d.selectedIndex
+                var hindex = h.selectedIndex
+                var minindex = min.selectedIndex
+                var sindex = s.selectedIndex
+                var yvalue = y.options[yindex].value
+                var mvalue = m.options[mindex].value
+                var dvalue = d.options[dindex].value
+                var hvalue = h.options[hindex].value
+                var minvalue = min.options[minindex].value
+                var svalue = s.options[sindex].value
+                var timeval = new Array(yvalue,mvalue,dvalue,hvalue,minvalue,svalue)
+                return timeval
+            }
+
+            var selects = document.querySelectorAll("select")
+            for(i=0;i<selects.length;i++){
+                selects[i].onchange = function(){
+                    timeCom()
+                }
+            }
+
+            function timeCom(){
+                var today = new Date()
+                var txtTime = getTimeTxt()
+                var valTime = getTimeVal()
+                var stime = new Date(valTime[0], valTime[1]-1, valTime[2], valTime[3], valTime[4], valTime[5])
+                var weekday = cweek(stime)
+                var difference = today.getTime() - stime.getTime()
+
+                var dayD = Math.floor(difference/(24*3600*1000))
+
+                var temp1 = difference%(24*3600*1000)
+                var hoursD = Math.floor(temp1/(3600*1000))
+
+                var temp2 = temp1%(3600*1000)        //计算小时数后剩余的毫秒数
+                var minutesD = Math.floor(temp2/(60*1000))
+
+                var temp3=temp2%(60*1000)      //计算分钟数后剩余的毫秒数
+                var secondsD=Math.round(temp3/1000)
+
+                if(difference>0){
+                    result.innerHTML = "现在距离 " + txtTime[0] + "年" + txtTime[1] + "月" + txtTime[2] + "日" + " " + weekday + " " + txtTime[3] + ":" + txtTime[4] + ":" + txtTime[5] + " 已经过去 " + dayD + " 天 "+ hoursD +" 小时 "+ minutesD +" 分 " + secondsD + " 秒"
+                }
+                else{
+                    var dayOver = Math.abs(dayD) - 1
+                    var hoursOver = Math.abs(hoursD) - 1
+                    var minutesOver = Math.abs(minutesD) - 1
+                    var secondsOver = Math.abs(secondsD)
+                    result.innerHTML = "现在距离 " + txtTime[0] + "年" + txtTime[1] + "月" + txtTime[2] + "日" + " " + weekday + " " + txtTime[3] + ":" + txtTime[4] + ":" + txtTime[5] + " 还有 " + dayOver + " 天 "+ hoursOver +" 小时 "+ minutesOver +" 分 " + secondsOver + " 秒"
+                }
+            }
+        </script>
+    </body>
+</html>

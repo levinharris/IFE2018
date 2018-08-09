@@ -14,4 +14,6 @@
  任务7 让你和页面对话
  [jstask7_demo](https://levinharris.github.io/IFE2018/JStask7/JStask7.html)  
  任务8 JavaScript里面的居民们
- [jstask8-1_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-1.html)  [jstask8-2_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-2.html)  [jstask8-345_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-345.html)  [jstask8-6_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-6.html)  [jstask8-7_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-7.html)  [jstask8-8_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-8.html)  [jstask8-9_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-9.html)  [jstask8-1011_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-1011.html)
+ [jstask8-1_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-1.html)  [jstask8-2_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-2.html)  [jstask8-345_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-345.html)  [jstask8-6_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-6.html)  [jstask8-7_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-7.html)  [jstask8-8_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-8.html)  [jstask8-9_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-9.html)  [jstask8-1011_demo](https://levinharris.github.io/IFE2018/JStask8/JStask8-1011.html) 
+ 任务9 倒数开始 
+ [计时器_demo](https://levinharris.github.io/IFE2018/JStask9/JStask9.html)
