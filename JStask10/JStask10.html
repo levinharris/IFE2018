@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        .email-sug{
+            list-style: none;
+            margin:0;
+            padding:0;
+            border:1px solid lightgray;
+            width:161px;
+            box-sizing: border-box;
+            overflow:auto;
+        }
+        .hide{
+            display: none;
+        }
+        li{
+            padding:0px 5px 1px 0px;
+        }
+        .active{
+            background-color: lightcoral;
+        }
+        .keyactive{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+    <body>
+        <div class="wrapper">
+            <input id="email-input" type="text">
+            <ul id="email-sug-wrapper" class="email-sug hide"></ul>
+        </div>
+        <script>
+            var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net',"sina.com"];
+            var ein = document.querySelector("#email-input")
+            var esug = document.querySelector("#email-sug-wrapper")
+
+
+            ein.addEventListener("input",function(){
+                    show()
+                    clearli()
+                    createList()
+                    showsel()
+                    resetsel()
+            })//输入监听
+
+            function createList() {
+                var mailin = ein.value
+                mailin = mailin.replace(/</g,"&lt;");
+                mailin = mailin.replace(/>/g,"&gt;");
+                var mailtemp = mailin.split(' ')
+                var mailhead = mailtemp.join('')
+                if(mailhead.length == 0){
+                    return false
+                }
+                else{
+                    connect(mailhead)
+                }
+            }
+
+            function connect(mailhead){  
+                if(mailhead.indexOf("@") > 0){
+                    var mailend = mailhead.substring(mailhead.lastIndexOf("@")+1)
+                    mailhead = mailhead.slice(0,mailhead.indexOf("@"))
+                    for(i=0;i<postfixList.length;i++){
+                        if(postfixList[i].indexOf(mailend)>=0){
+                            var eli = document.createElement("li")
+                            var fullmail = mailhead + "@" + postfixList[i]
+                            var finmail = coded(fullmail)
+                            var mailtxt = document.createTextNode(finmail)
+                            eli.appendChild(mailtxt)
+                            esug.appendChild(eli)
+                        }
+                    }
+                }
+                else{
+                    for(i=0;i<postfixList.length;i++){
+                        var eli = document.createElement("li")
+                        var fullmail = mailhead + "@" + postfixList[i]
+                        var finmail = coded(fullmail)
+                        var mailtxt = document.createTextNode(finmail)
+                        eli.appendChild(mailtxt)
+                        esug.appendChild(eli)
+                    }
+                }
+            }
+
+            function show(){
+                if(ein.value == "" || ein.value == undefined){
+                    esug.classList.add("hide")
+                }
+                else{
+                    esug.classList.remove("hide")
+                }
+            }
+
+            function clearli(){
+                var lilen = esug.childNodes.length
+                if(lilen>0){
+                    for(i=0;i<lilen;i++){
+                        esug.removeChild(esug.childNodes[0])
+                    }
+                }
+            }
+
+            function clearClass(className){
+                var c = document.querySelector(className)
+                var a = className.slice(1)
+                if (c != null) {
+                    c.classList.remove(a)
+                }
+            }
+
+            function coded(mailName){
+                var mailtmp = mailName.replace(/&lt;/g,"<");
+                mailcom = mailtmp.replace(/&gt;/g,">");
+                return mailcom
+            }
+
+            function uncoded(mailName){
+                var tmail = mailName.replace(/&lt;/g,"<");
+                mailfin = tmail.replace(/&gt;/g,">");
+                return mailfin
+            }
+
+
+            function showsel(){
+                var lilen = esug.childNodes.length
+                for(i=0;i<lilen;i++){
+                    var esugli = esug.childNodes[i]
+                    esugli.addEventListener("mouseover",function(event){
+                        var self = event.target
+                        clearClass(".keyactive")
+                        clearClass(".active")
+                        self.classList.add("active")
+                    })
+                    esugli.addEventListener("mouseout",function(event){
+                        var self = event.target
+                        clearClass(".active")
+                        resetsel()
+                    })
+                    esugli.addEventListener("click",function(event){
+                        var self = event.target
+                        var t = uncoded(self.innerHTML)
+                        ein.value = t
+                        clearli()
+                        ein.focus()
+                    })
+                }
+            }
+
+            function resetsel() {
+                var esli = esug.querySelectorAll("li")
+                if(esli.length == 0){
+                    return false
+                }
+                else if (esli[0].classList.contains("keyactive") == false){
+                    clearClass(".keyactive")
+                    esli[0].classList.add("keyactive")
+                }
+            }
+            
+            window.addEventListener("keyup",function(event){
+                var code = event.keyCode
+                var esli = esug.querySelectorAll("li")
+                if(esli.length == 0){
+                    return false
+                }
+                else{
+                    if(code == 38){
+                        for(i=0;i<esli.length;i++){
+                            if(esli[i].classList.contains("keyactive") == true){
+                                esli[i].classList.remove("keyactive")
+                                var j = esli.length-1
+                                if(i == 0){
+                                    esli[j].classList.add("keyactive")
+                                    return false
+                                }
+                                else{
+                                    esli[i-1].classList.add("keyactive")
+                                }
+                            }
+                        }
+                    }
+                    if(code == 40){
+                        for(i=0;i<esli.length;i++){
+                            if(esli[i].classList.contains("keyactive") == true){
+                                esli[i].classList.remove("keyactive")
+                                var k = esli.length-1
+                                if(i == k){
+                                    esli[0].classList.add("keyactive")
+                                }
+                                else{
+                                    esli[i+1].classList.add("keyactive")
+                                    return false
+                                }
+                            }
+                        }
+                    }
+                    if(code == 13){
+                        for(i=0;i<esli.length;i++){
+                            if(esli[i].classList.contains("keyactive") == true){
+                                var s = uncoded(esli[i].innerHTML)
+                                ein.value = s
+                                clearli()
+                            }
+                        }
+                    }
+                    if(code == 27){
+                        ein.select()
+                    }
+                }
+            })
+
+            window.onload = function(){
+                ein.focus()
+            }
+
+        </script>
+    </body>
+</html>
