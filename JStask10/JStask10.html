@@ -165,6 +165,11 @@
             window.addEventListener("keyup",function(event){
                 var code = event.keyCode
                 var esli = esug.querySelectorAll("li")
+                if(ein.value !="" || ein.value != undefined){
+                    if(code == 27){
+                        ein.select()
+                    }
+                }
                 if(esli.length == 0){
                     return false
                 }
@@ -207,9 +212,6 @@
                                 clearli()
                             }
                         }
-                    }
-                    if(code == 27){
-                        ein.select()
                     }
                 }
             })
