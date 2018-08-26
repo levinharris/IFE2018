@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        table{
+            border-collapse:collapse;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        td{
+            text-align:center;
+        }
+
+    </style>
+</head>
+    <body>
+        <select id="product-select">
+            <option value="phone">手机</option>
+            <option value="laptop">笔记本</option>
+            <option value="intelligentSpeaker">智能音箱</option>
+        </select>
+        <select id="region-select">
+            <option value="east">华东</option>
+            <option value="south">华南</option>
+            <option value="north">华北</option>
+        </select>
+        <br>
+        <div>
+            <span>商品:</span>
+            <input type="checkbox" class="product" value="手机">手机
+            <input type="checkbox" class="product" value="笔记本">笔记本
+            <input type="checkbox" class="product" value="智能音箱">智能音箱
+            <input type="checkbox" id="proall" value="全选">全选
+        </div>
+        <div>
+            <span>地区:</span>
+            <input type="checkbox" class="region" value="华东">华东
+            <input type="checkbox" class="region" value="华南">华南
+            <input type="checkbox" class="region" value="华北">华北 
+            <input type="checkbox" id="regall" value="全选">全选
+        </div>
+        <br>
+        <div id="table-wrapper"></div>
+        <div id="region-radio-wrapper"></div>
+        <div id="product-radio-wrapper"></div>
+
+        <script src="../JStask11/ife31data.js"></script>
+        <script src="../JStask11/ver1.js"></script>
+        <script src="../JStask11/ver3.js"></script>        
+    </body>
+</html>

@@ -127,9 +127,9 @@
 
 
             function showsel(){
-                var lilen = esug.childNodes.length
+                var lilen = esug.children.length
                 for(i=0;i<lilen;i++){
-                    var esugli = esug.childNodes[i]
+                    var esugli = esug.children[i]
                     esugli.addEventListener("mouseover",function(event){
                         var self = event.target
                         clearClass(".keyactive")
