@@ -20,4 +20,4 @@
  任务10 给爱的人发个邮件吧
  [邮箱输入框_demo](https://levinharris.github.io/IFE2018/JStask10/JStask10.html)   
  任务11 我是精明的小卖家（一）
- [数据表格Ver1_demo](https://levinharris.github.io/IFE2018/JStask11/JStask11.html)
+ [数据表格ver1_demo](https://levinharris.github.io/IFE2018/JStask11/JStask11.html)
